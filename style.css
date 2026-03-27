@@ -164,14 +164,15 @@ body {
     font-weight: 600;
     color: var(--text-light);
     box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
-    animation: float 3s ease-in-out infinite;
     overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.1);
 }
 
 .profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 @keyframes float {
@@ -414,6 +415,11 @@ section {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+.project-image {
+    height: 200px;
+    overflow: hidden;
+}
+
 .project-image .project-placeholder {
     height: 200px;
     background: var(--gradient);
@@ -422,6 +428,17 @@ section {
     justify-content: center;
     font-size: 1.25rem;
     font-weight: 600;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
 }
 
 .project-info {
